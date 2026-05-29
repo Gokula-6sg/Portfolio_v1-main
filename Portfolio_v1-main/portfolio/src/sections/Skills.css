@@ -1,0 +1,99 @@
+.skills-bento {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.skill-card {
+  padding: 24px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.skill-card:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: var(--shadow-lg);
+}
+
+.skill-card.wide {
+  grid-column: span 2;
+}
+
+.skill-card.sk-yellow {
+  background: var(--yellow) !important;
+}
+
+.skill-card.sk-black {
+  background: var(--black) !important;
+  color: var(--cream);
+}
+
+.sk-emoji {
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.sk-name {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 24px;
+  letter-spacing: 0.5px;
+  margin-bottom: 6px;
+}
+
+.sk-desc {
+  font-size: 12px;
+  line-height: 1.5;
+  color: #666;
+  font-weight: 400;
+}
+
+.sk-black .sk-desc {
+  color: #999;
+}
+
+.skill-dots {
+  display: flex;
+  gap: 5px;
+  margin-top: 16px;
+}
+
+.dot {
+  width: 22px;
+  height: 6px;
+  border-radius: 3px;
+  background: #ddd;
+  transition: background 0.2s;
+}
+
+.sk-black .dot {
+  background: #333;
+}
+
+.dot.on {
+  background: var(--black);
+}
+
+.sk-yellow .dot.on {
+  background: var(--black);
+}
+
+.sk-black .dot.on {
+  background: var(--yellow);
+}
+
+@media (max-width: 900px) {
+  .skills-bento {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .skill-card.wide {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 500px) {
+  .skills-bento {
+    grid-template-columns: 1fr;
+  }
+  .skill-card.wide {
+    grid-column: span 1;
+  }
+}

@@ -1,0 +1,96 @@
+.contact-section {
+  background: var(--yellow);
+  border-top: var(--border);
+  padding: 100px 48px;
+}
+
+.contact-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.contact-big {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(72px, 13vw, 160px);
+  line-height: 0.88;
+  letter-spacing: -3px;
+  color: var(--black);
+  margin-bottom: 48px;
+}
+
+.contact-body {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 48px;
+  align-items: start;
+  margin-bottom: 60px;
+}
+
+.contact-sub {
+  font-size: 17px;
+  line-height: 1.75;
+  color: #333;
+  font-weight: 400;
+  max-width: 460px;
+}
+
+.contact-sub strong {
+  color: var(--black);
+  font-weight: 700;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.contact-btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 28px;
+  background: var(--cream) !important;
+  font-family: 'Syne', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  text-decoration: none;
+  color: var(--black);
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.contact-btn:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: var(--shadow-lg);
+  background: var(--white) !important;
+}
+
+.email-big {
+  display: block;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(20px, 3.5vw, 40px);
+  letter-spacing: 3px;
+  color: rgba(17,17,17,0.3);
+  text-decoration: none;
+  transition: color 0.25s ease;
+  border-top: 2px solid rgba(17,17,17,0.2);
+  padding-top: 32px;
+}
+
+.email-big:hover {
+  color: var(--black);
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 70px 24px;
+  }
+  .contact-body {
+    grid-template-columns: 1fr;
+  }
+  .contact-links {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}

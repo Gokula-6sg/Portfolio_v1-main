@@ -1,0 +1,161 @@
+.hero {
+  min-height: 100vh;
+  padding: 120px 48px 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+}
+
+/* Top Yellow Bar */
+.hero-top {
+  background: var(--yellow);
+  border: var(--border);
+  border-radius: var(--radius) var(--radius) 0 0;
+  width: 100%;
+  max-width: 1000px;
+  padding: 28px 48px 0;
+  text-align: center;
+  animation: slideDown 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.hero-hello {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(48px, 8vw, 90px);
+  letter-spacing: 2px;
+  line-height: 1;
+  color: var(--black);
+}
+
+.hero-sub {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding-bottom: 20px;
+  opacity: 0.65;
+  color: var(--black);
+}
+
+/* Name Card */
+.hero-name-card {
+  width: 100%;
+  max-width: 1000px;
+  padding: 56px 48px 40px;
+  position: relative;
+  z-index: 2;
+  border-top: none;
+  border-radius: 0;
+  animation: fadeUp 0.85s 0.15s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.hero-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(50px, 10vw, 120px);
+  line-height: 0.88;
+  letter-spacing: -2px;
+  color: var(--black);
+  display: flex;
+  flex-direction: column;
+}
+
+.name-line {
+    display: block;
+    overflow: hidden;
+
+}
+
+.hero-deco {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 28px;
+  flex-wrap: wrap;
+}
+
+.deco-tag {
+  font-family: 'DM Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 500;
+  background: var(--black);
+  color: var(--cream);
+  padding: 6px 14px;
+  border-radius: 4px;
+  border: 2px solid var(--black);
+}
+
+.deco-tag--outline {
+  background: transparent;
+  color: var(--black);
+}
+
+.deco-divider {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 20px;
+  color: var(--muted);
+}
+
+/* Bottom Bar */
+.hero-bottom {
+  background: var(--yellow);
+  border: var(--border);
+  border-top: none;
+  border-radius: 0 0 var(--radius) var(--radius);
+  width: 100%;
+  max-width: 1000px;
+  padding: 18px 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  animation: fadeUp 0.85s 0.3s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.hero-role-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  color: var(--black);
+}
+
+.badge-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--black);
+  animation: blink 2s ease infinite;
+  flex-shrink: 0;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.hero-btns {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 640px) {
+  .hero { padding: 100px 20px 60px; }
+  .hero-top, .hero-name-card, .hero-bottom { padding-left: 24px; padding-right: 24px; }
+  .hero-bottom { flex-direction: column; align-items: flex-start; }
+}

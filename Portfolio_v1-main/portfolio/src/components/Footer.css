@@ -1,0 +1,25 @@
+.footer {
+  background: var(--black);
+  color: var(--cream);
+  padding: 24px 48px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: var(--border);
+}
+
+.footer-logo {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 22px;
+  letter-spacing: 3px;
+  color: var(--yellow);
+}
+
+.footer-mid,
+.footer-right {
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: #555;
+  text-transform: uppercase;
+}
