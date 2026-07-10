@@ -24,7 +24,40 @@
     border-radius: var(--radius);
     background: var(--white);
     box-shadow: var(--shadow);
-    overflow: hidden;
+
+    /* Show only about 5 items */
+    max-height: 390px;
+
+    /* Enable scrolling */
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    /* Smooth scrolling */
+    scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+.proj-index::-webkit-scrollbar {
+    width: 6px;
+}
+
+.proj-index::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.proj-index::-webkit-scrollbar-thumb {
+    background: rgba(17, 17, 17, 0.25);
+    border-radius: 999px;
+}
+
+.proj-index::-webkit-scrollbar-thumb:hover {
+    background: rgba(17, 17, 17, 0.45);
+}
+
+/* Firefox */
+.proj-index {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(17, 17, 17, 0.25) transparent;
 }
 
 .proj-index-item {
@@ -34,12 +67,15 @@
     gap: 12px;
     padding: 18px 20px;
     border: none;
-    border-bottom: 2px solid rgba(17,17,17,0.06);
+    border-bottom: 2px solid rgba(17, 17, 17, 0.06);
     background: transparent;
     cursor: pointer;
     text-align: left;
     transition: background 0.15s ease;
     font-family: 'Syne', sans-serif;
+
+    /* Prevent items from shrinking */
+    flex-shrink: 0;
 }
 
 .proj-index-item:last-child {
@@ -52,7 +88,7 @@
 
 .proj-index-item--active {
     background: var(--yellow) !important;
-    border-bottom-color: rgba(17,17,17,0.12);
+    border-bottom-color: rgba(17, 17, 17, 0.12);
 }
 
 .pi-num {
@@ -63,7 +99,7 @@
 }
 
 .proj-index-item--active .pi-num {
-    color: rgba(17,17,17,0.5);
+    color: rgba(17, 17, 17, 0.5);
 }
 
 .pi-name {

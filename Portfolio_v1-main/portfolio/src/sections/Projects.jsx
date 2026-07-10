@@ -57,6 +57,17 @@ const projects = [
         year: '2025',
         emoji: '🎯',
     },
+    {
+        num: '05',
+        name: 'Knowledge Graph API',
+        tagline: 'Every Theory, one platform.',
+        desc: 'A backend-only API that builds a smart knowledge graph connecting skills, resources, and topics — powered by GraphQL and Neo4j.',
+        tech: ['Node.js', 'Express', 'Neo4j', 'GraphQL Server', 'Redis'],
+        github: 'https://github.com/Gokula-6sg/knowledge-Graph-API',
+        category: 'Education Platform',
+        year: '2025',
+        emoji: '🎯',
+    },
 
 ]
 
