@@ -87,7 +87,7 @@
   color: var(--black);
 }
 
-/* Right stack */
+/* Right stack ----*/
 .about-right-stack {
   display: flex;
   flex-direction: column;
